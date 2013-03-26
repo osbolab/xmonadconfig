@@ -1,0 +1,15 @@
+#! /bin/bash
+echo "Recompiling xmonad configuration..."
+xmonad --recompile
+code=$?
+if [ $code -ne 0 ]; then
+    echo "Recompile exited with code $code"
+    exit $code
+fi
+echo "Restarting xmonad..."
+xmonad --restart
+code=$?
+if [ $code -ne 0 ]; then
+    echo "Restart exited with code $code"
+    exit $code
+fi

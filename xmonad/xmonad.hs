@@ -76,7 +76,7 @@ myKeys =
     , ("M-S-z", spawn "gnome-session-quit")
     , ("M-S-\\", spawn "google-chrome")
     , ("M-S-a", sendMessage ToggleLayout)
-    , ("M-S-;", spawn myDmenu)
+    , ("M-;", spawn myDmenu)
     ]
 
 
