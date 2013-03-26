@@ -68,15 +68,22 @@ myLayouts = smartBorders $ noTitles
 
 myLayoutHook = toggleLayouts myAllWindows myLayouts
     
--- myDmenu = "dmenu_recent -b -i -p Run -nf black -sf white -sb steelblue -nb lightsalmon"
-myDmenu = "dmenu_recent -p Run -i"
+-- appDmenu = "dmenu_recent -b -i -p Run -nf black -sf white -sb steelblue -nb lightsalmon"
+appDmenu = "dmenu_recent -p Run -i"
+appFinder = "nautilus"
+appScreenshotFull = "gnome-screenshot"
+appScreenshotWindow = "gnome-screenshot -w"
+appScreenshotArea = "gnome-screenshot -a"
 
 myKeys =
     [ ("M-g", sendMessage Shrink)
     , ("M-S-z", spawn "gnome-session-quit")
     , ("M-S-\\", spawn "google-chrome")
     , ("M-S-a", sendMessage ToggleLayout)
-    , ("M-;", spawn myDmenu)
+    , ("M-;", spawn appDmenu)
+    , ("M-S-;", spawn appFinder)
+    , ("M-<F9>", spawn appScreenshotFull)
+    , ("M-<F10>", spawn appScreenshotArea)
     ]
 
 
