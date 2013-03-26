@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=XMonad Gnome
+Comment=Tiling window manager
+Exec=gnome-session-xmonad
+TryExec=gnome-session
+Icon=
+Type=Application
